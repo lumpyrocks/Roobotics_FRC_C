@@ -33,10 +33,8 @@ public class DrivePIDSubsystem extends PIDSubsystem {
     public static final double DRIVE_MAX_INPUT = 1.0;
     public static final double DRIVE_MIN_INPUT = -1.0;
     RobotDrive m_drive;
-    Talon m_leftFront;
-    Talon m_rightFront;
-    Talon m_leftRear;
-    Talon m_rightRear;
+    Talon m_leftDrive;
+    Talon m_rightDrive;
     Gyro m_gyro;
     AnalogChannel m_gyroChannel;
     double m_steerAngle;
@@ -59,11 +57,9 @@ public class DrivePIDSubsystem extends PIDSubsystem {
               K_DERIVATIVE);
 
         // Drive set-up.
-        m_leftFront = new Talon(RobotMap.DRIVE_LEFT_FRONT_MOTOR_CHANNEL);
-        m_leftRear = new Talon(RobotMap.DRIVE_LEFT_REAR_MOTOR_CHANNEL);
-        m_rightFront = new Talon(RobotMap.DRIVE_RIGHT_FRONT_MOTOR_CHANNEL);
-        m_rightRear = new Talon(RobotMap.DRIVE_RIGHT_REAR_MOTOR_CHANNEL);
-        m_drive = new RobotDrive(m_leftFront, m_leftRear, m_rightFront, m_rightRear);
+        m_leftDrive = new Talon(RobotMap.DRIVE_LEFT_MOTOR_CHANNEL);
+        m_rightDrive = new Talon(RobotMap.DRIVE_RIGHT_MOTOR_CHANNEL);
+        m_drive = new RobotDrive(m_leftDrive, m_rightDrive);
         m_drive.setSafetyEnabled(false);
         
         // Gyro stabilization set-up.
