@@ -25,7 +25,7 @@ import edu.afs.commands.CommandBase;
  * creating this project, you must also update the manifest file in the resource
  * directory.
  */
-public class Robot4073 extends IterativeRobot {
+public class Robot4373 extends IterativeRobot {
 
     Command autonomousCommand;
 
