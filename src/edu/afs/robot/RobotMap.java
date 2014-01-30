@@ -20,10 +20,8 @@ public class RobotMap {
     
     // Drive Subsystem
     // Digital Sidecar PWM outputs
-    public static final int DRIVE_LEFT_FRONT_MOTOR_CHANNEL = 1;
-    public static final int DRIVE_RIGHT_FRONT_MOTOR_CHANNEL = 2;
-    public static final int DRIVE_LEFT_REAR_MOTOR_CHANNEL = 3;
-    public static final int DRIVE_RIGHT_REAR_MOTOR_CHANNEL = 4;
+    public static final int DRIVE_LEFT_MOTOR_CHANNEL = 2;
+    public static final int DRIVE_RIGHT_MOTOR_CHANNEL = 1;
     // Analog Breakout
     public static final int GYRO_CHANNEL = 1;
     // Driver Station
